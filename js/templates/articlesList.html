@@ -1,0 +1,12 @@
+<div ng-if="articlesCtrl.articlesListEmpty">No articles available right now!</div>
+
+<div ng-if="!articlesCtrl.articlesListEmpty" ng-repeat='article in articlesCtrl.articles'>
+  {{ article.title }}
+  <a ng-href="/#/article/{{ article.id }}">Show</a>
+  <a ng-href="/#/article/{{ article.id }}/edit">Edit</a>
+  <a href='#' ng-click="articlesCtrl.deleteArticle(article)">Remove</a>
+</div>
+
+<br/>
+
+<a href="/#/articles/new">New Article</a>
