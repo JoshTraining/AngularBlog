@@ -10,7 +10,7 @@
       vm.article = Article.get({ id: $routeParams.id });
 
       vm.updateArticle = function() {
-        vm.article.$update({ id: vm.article.id }, function(response) {
+        vm.article.$save({ id: vm.article.id }, function(response) {
           $location.path('/articles');
         });
       };

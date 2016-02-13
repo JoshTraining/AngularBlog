@@ -36,10 +36,6 @@
   })
 
   .factory('Article', function(myConfig, $resource) {
-    return $resource(myConfig.API_ROOT_URL + "/articles/:id.json", { id: '@_id' }, {
-      update: {
-        method: 'PUT'
-      }
-    });
+    return $resource(myConfig.API_ROOT_URL + "/articles/:id.json", { id: '@_id' });
   });
 })();
